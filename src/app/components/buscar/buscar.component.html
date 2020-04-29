@@ -1,0 +1,30 @@
+<h1 class="animated fadeIn fast">Buscador <small>{{termino}} </small></h1>
+
+<div class="row animated fadeIn low" *ngIf="heroes.length == 0">
+<div class="col-md-12">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>No se encotro el Heroe con termino "{{termino}}"</strong> 
+  </div>
+  
+  <script>
+    $(".alert").alert();
+  </script>
+</div>
+</div>
+
+<div class="card-columns">
+  <div class="card animated fadeIn" *ngFor="let heroe of heroes; let i = index">
+    <img src="{{ heroe.img }}" class="card-img-top" alt="{{heroe.nombre}}">
+    <div class="card-body">
+      <h5 class="card-title">{{heroe.nombre}} </h5>
+      <p class="card-text">{{heroe.bio}} </p>
+      <p class="card-text"><small class="text-muted">{{heroe.aparicion}} </small></p>
+      <!-- <a [routerLink]="['/heroe/',i]" type="button" class="btn btn-outline-primary btn-block">Ver mas...</a> -->
+      <button (click)="verHeroe(i)" type="button" name="" id="" class="btn btn-outline-primary btn-lg btn-block">Ver
+        mas...</button>
+    </div>
+  </div>
+</div>
