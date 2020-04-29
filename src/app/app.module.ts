@@ -13,6 +13,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroesService } from './services/heroes.service';
 import { HeroComponent } from './components/hero/hero.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 
 
@@ -24,7 +25,8 @@ import { BuscarComponent } from './components/buscar/buscar.component';
     AboutComponent,
     HeroesComponent,
     HeroComponent,
-    BuscarComponent
+    BuscarComponent,
+    HeroeTarjetaComponent
   ],
   imports: [
     BrowserModule,
